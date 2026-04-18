@@ -42,26 +42,28 @@
           </div>
         </div>
         
-        <!-- Interactive Tree Container -->
-        <div class="bg-surface-container-low/30 rounded-3xl p-8 lg:p-12 overflow-x-auto ambient-shadow border border-outline-variant/10">
-          <div class="min-w-fit flex justify-center py-10">
-            <template v-if="roots.length > 0">
-              <OrgChartTree
-                v-for="root in roots"
-                :key="root.id"
-                :node="mapToViewNode(root)"
-                :children="getChildren(root.id)"
-                :children-of="getChildren"
-                :selected-id="selectedMemberId"
-                :loading-depth="() => false"
-                @select="handleSelect"
-                @toggle="handleToggle"
-              />
-            </template>
-            <div v-else class="flex py-20 items-center justify-center text-on-surface-variant opacity-50 font-body">
-              <p>Loading organizational data...</p>
+        <!-- Interactive Pan-Zoom Tree Container -->
+        <div class="h-[700px] w-full border border-outline-variant/10 rounded-3xl overflow-hidden ambient-shadow bg-surface-container-low/30">
+          <PanZoomContainer>
+            <div class="flex items-center justify-center p-20 min-w-max">
+              <template v-if="roots.length > 0">
+                <OrgChartTree
+                  v-for="root in roots"
+                  :key="root.id"
+                  :node="mapToViewNode(root)"
+                  :children="getChildren(root.id)"
+                  :children-of="getChildren"
+                  :selected-id="selectedMemberId"
+                  :loading-depth="() => false"
+                  @select="handleSelect"
+                  @toggle="handleToggle"
+                />
+              </template>
+              <div v-else class="flex py-20 items-center justify-center text-on-surface-variant opacity-50 font-body">
+                <p>Loading organizational structure...</p>
+              </div>
             </div>
-          </div>
+          </PanZoomContainer>
         </div>
       </div>
     </section>
@@ -112,6 +114,7 @@ import { ref, computed } from 'vue';
 import { useAsyncData } from '#imports';
 import { MockTeamRepository } from '@infrastructure/repositories/MockTeamRepository';
 import OrgChartTree from '../components/OrgChartTree.vue';
+import PanZoomContainer from '../components/PanZoomContainer.vue';
 
 const teamRepo = new MockTeamRepository();
 const { data: allMembers } = await useAsyncData('teamData', () => teamRepo.getOrganigram());
