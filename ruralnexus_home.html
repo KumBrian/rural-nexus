@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RuralNexus | Empowering Rural Resilience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#42493e",
+                    "on-secondary-fixed-variant": "#3a475c",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f2f4f2",
+                    "secondary-fixed": "#d6e3fe",
+                    "primary": "#022c01",
+                    "surface-container": "#eceeec",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8faf8",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#3e6835",
+                    "on-secondary-fixed": "#0e1c2f",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "secondary-fixed-dim": "#bac7e1",
+                    "secondary": "#525f75",
+                    "on-surface": "#191c1b",
+                    "tertiary-container": "#543300",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-secondary-container": "#58657b",
+                    "surface": "#f8faf8",
+                    "primary-container": "#1a4314",
+                    "on-primary-fixed": "#002200",
+                    "surface-variant": "#e1e3e1",
+                    "outline-variant": "#c2c9bb",
+                    "secondary-container": "#d6e3fe",
+                    "surface-dim": "#d8dad9",
+                    "inverse-surface": "#2e3130",
+                    "surface-container-highest": "#e1e3e1",
+                    "on-tertiary-container": "#e49200",
+                    "surface-container-high": "#e6e9e7",
+                    "tertiary": "#372000",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8faf8",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-primary-fixed-variant": "#27501f",
+                    "primary-fixed": "#bff0af",
+                    "outline": "#72796e",
+                    "primary-fixed-dim": "#a3d394",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#191c1b",
+                    "inverse-primary": "#a3d394",
+                    "inverse-on-surface": "#eff1ef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hexagon-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .organic-gradient {
+            background: radial-gradient(circle at 0% 0%, rgba(26, 67, 20, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/90 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,27,0.06)]">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold text-emerald-950 flex items-center gap-2 font-headline tracking-tight">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">eco</span>
+                RuralNexus
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-emerald-900 border-b-2 border-emerald-800 pb-1 font-headline font-semibold tracking-tight transition-all" href="#">Who we are</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-headline font-semibold tracking-tight" href="#">Program Areas</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-headline font-semibold tracking-tight" href="#">Our Network</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-headline font-semibold tracking-tight" href="#">Research</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-headline font-semibold tracking-tight" href="#">News/Events</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-headline font-semibold tracking-tight" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-md font-semibold scale-95 active:opacity-80 transition-all hover:bg-primary-container">Login</button>
+<button class="hidden lg:block text-sm text-stone-500 font-medium hover:underline">Jump to content</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover opacity-60" data-alt="expansive sun-drenched terraced rice fields at dawn with mist rising between green valleys and distant silhouettes of mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz6tOFDpi9JnvR9L718aJPmWpVZQ59pwQLtV41Gxw1VOjasbLiYlGzp-4Hbo9H5s0nxYVdLbpKA-OOEbSS6zDT5aqMRiHEeD81O3mljWPmA7Z49uf7-Mq-u9tVz7xxSBaB_XpvNCQfiotDboCy2vYDhr048hi0XRJEqbOMPtfBkWhcVqWT0CBDJhVshAbrCz-TKc8yjiXXE-QqL3absXdnzBoka3PUPqCHiKqZLLoMhCX4ewjc2KcEGnTHAXhrpuR7bWXQtZPTedQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-80"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-block bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20">
+<span class="text-primary-fixed font-bold tracking-widest text-xs uppercase">NGO • Digital Excellence</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold text-white font-headline leading-[1.1] tracking-tight">
+                        Empowering <br/><span class="text-on-primary-container">Rural Resilience</span>
+</h1>
+<p class="text-xl text-surface-variant max-w-xl leading-relaxed">
+                        Advancing UN SDGs to build resilient food systems through data-driven action and community-focused innovation.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-low/20 text-white rounded-full text-sm font-medium border border-white/10">Action Research</span>
+<span class="px-4 py-2 bg-surface-container-low/20 text-white rounded-full text-sm font-medium border border-white/10">Innovation</span>
+<span class="px-4 py-2 bg-surface-container-low/20 text-white rounded-full text-sm font-medium border border-white/10">Development</span>
+<span class="px-4 py-2 bg-surface-container-low/20 text-white rounded-full text-sm font-medium border border-white/10">Farming Systems</span>
+</div>
+<div class="pt-4">
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-fixed transition-colors shadow-xl">Our Mission &amp; Impact</button>
+</div>
+</div>
+<div class="hidden lg:flex justify-center relative">
+<div class="w-96 h-96 hexagon-mask bg-white/5 backdrop-blur-2xl flex items-center justify-center p-8 border border-white/10 relative">
+<div class="text-center space-y-4">
+<span class="material-symbols-outlined text-on-primary-container text-6xl" style="font-variation-settings: 'FILL' 1;">hub</span>
+<h3 class="text-white text-2xl font-bold font-headline">The Nexus Engine</h3>
+<p class="text-surface-variant text-sm px-4">Integrating research, policy, and field operations into a single sustainable loop.</p>
+</div>
+<div class="absolute -top-10 -right-10 w-32 h-32 hexagon-mask bg-on-tertiary-container/20 backdrop-blur-lg"></div>
+<div class="absolute -bottom-10 -left-10 w-24 h-24 hexagon-mask bg-on-primary-container/20 backdrop-blur-lg"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Program Areas (The Hub) -->
+<section class="py-32 bg-surface relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-bold font-headline text-on-surface mb-6 tracking-tight">The Program Hub</h2>
+<p class="text-lg text-on-surface-variant">Our multidisciplinary approach targets five core pillars of rural development, ensuring a holistic transition to sustainable agriculture.</p>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span>View Strategic Framework</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- PA1 -->
+<div class="group relative p-8 bg-surface-container-lowest rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl">
+<div class="w-14 h-14 bg-cyan-100 flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-cyan-800 text-3xl">add_business</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-cyan-950 mb-3">Project Acquisition</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Securing funding and strategic partnerships for global rural initiatives.</p>
+<a class="inline-flex items-center gap-2 text-cyan-800 font-semibold text-sm group-hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+<!-- PA2 -->
+<div class="group relative p-8 bg-surface-container-lowest rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl">
+<div class="w-14 h-14 bg-emerald-100 flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-emerald-900 text-3xl">account_tree</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-emerald-950 mb-3">Project Management</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">End-to-end execution of complex cross-border development programs.</p>
+<a class="inline-flex items-center gap-2 text-emerald-900 font-semibold text-sm group-hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+<!-- PA3 -->
+<div class="group relative p-8 bg-surface-container-lowest rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl">
+<div class="w-14 h-14 bg-blue-100 flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-blue-900 text-3xl">science</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-blue-950 mb-3">Transdisciplinary Research</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Fusing academic rigor with indigenous farming knowledge systems.</p>
+<a class="inline-flex items-center gap-2 text-blue-900 font-semibold text-sm group-hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+<!-- PA4 -->
+<div class="group relative p-8 bg-surface-container-lowest rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl">
+<div class="w-14 h-14 bg-amber-100 flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-amber-800 text-3xl">school</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-amber-950 mb-3">Capacity Building</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Empowering local leaders and farmers with digital and technical skills.</p>
+<a class="inline-flex items-center gap-2 text-amber-800 font-semibold text-sm group-hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+<!-- PA5 -->
+<div class="group relative p-8 bg-surface-container-lowest rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl">
+<div class="w-14 h-14 bg-lime-100 flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-lime-900 text-3xl">psychology</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-lime-950 mb-3">Consultancy Services</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Expert advisory for governments on sustainable land-use policies.</p>
+<a class="inline-flex items-center gap-2 text-lime-900 font-semibold text-sm group-hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Who We Are: Organigram -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-5xl mx-auto px-8 text-center">
+<div class="mb-20">
+<h2 class="text-4xl font-bold font-headline text-on-surface mb-4">Our Structure</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">A transparent, hierarchical ecosystem designed for rapid decision-making and field-level impact.</p>
+</div>
+<div class="relative">
+<!-- Director -->
+<div class="flex justify-center mb-16 relative">
+<div class="bg-primary p-6 rounded-2xl shadow-xl border-4 border-white inline-block">
+<p class="text-white font-bold font-headline">Executive Director</p>
+<p class="text-primary-fixed-dim text-xs">Strategic Oversight</p>
+</div>
+<div class="absolute bottom-0 left-1/2 w-px h-16 bg-outline-variant -mb-16"></div>
+</div>
+<!-- Board -->
+<div class="flex justify-center mb-16 relative">
+<div class="bg-white p-5 rounded-xl shadow-md border border-outline-variant inline-block">
+<p class="text-on-surface font-bold">Advisory Board</p>
+<p class="text-on-surface-variant text-xs">Governance &amp; Ethics</p>
+</div>
+<div class="absolute bottom-0 left-1/2 w-px h-16 bg-outline-variant -mb-16"></div>
+<div class="absolute top-0 left-1/2 w-4/5 h-px bg-outline-variant -translate-x-1/2"></div>
+</div>
+<!-- Coordinators -->
+<div class="grid grid-cols-3 gap-8 relative">
+<div class="absolute top-0 left-1/2 w-full h-px bg-outline-variant -translate-x-1/2"></div>
+<div class="pt-8 relative">
+<div class="absolute top-0 left-1/2 w-px h-8 bg-outline-variant"></div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-sm">
+<p class="text-on-surface font-semibold text-sm">Regional Coordinators</p>
+</div>
+</div>
+<div class="pt-8 relative">
+<div class="absolute top-0 left-1/2 w-px h-8 bg-outline-variant"></div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-sm">
+<p class="text-on-surface font-semibold text-sm">Research Leads</p>
+</div>
+</div>
+<div class="pt-8 relative">
+<div class="absolute top-0 left-1/2 w-px h-8 bg-outline-variant"></div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-sm">
+<p class="text-on-surface font-semibold text-sm">Tech Operations</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-bold font-headline mb-16 text-center">Resilience in Action</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Story 1 -->
+<div class="p-10 bg-white rounded-3xl shadow-sm border border-stone-100 flex flex-col justify-between hover:border-primary-container/20 transition-all">
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-xl italic text-on-surface leading-relaxed mb-8">"RuralNexus didn't just give us seeds; they gave us a digital market link that tripled our income in two seasons."</p>
+<div class="flex items-center gap-4 border-t border-stone-100 pt-8">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="portrait of a focused female farmer in sunhat, warm natural lighting, confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi4i5GI7kHgDr4id5vumE9sRUsOLunYBiSplZdT1-2Re4NlEbbcDV2i8OCb1v3da4JHcnlCm8IXONHax3UtDG5355wMoiweHC0ZiuaQ2k-s0e7aUdHfGuhyw9H1lpQKrRMLc9V3JcY-0cw37SJzTzyJ3PkPhN_5NM8o07Qt1WE9RczTml-WBpZeGVcoB8Z-dBEy6c5s2ufAgZ-Aw5LO30KWldxWO81A2Elo8tLx0IhhGdMRnnM5OTLsIryeL91sQ07UvORA0wbT3g"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Amara Okafor</p>
+<p class="text-sm text-on-surface-variant">Lead, Women's Cooperative</p>
+</div>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="lg:col-span-2 p-10 bg-primary-container rounded-3xl flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-1/2">
+<span class="material-symbols-outlined text-white/20 text-7xl mb-6" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-2xl text-white font-headline leading-snug mb-8">"Through their Transdisciplinary Research, we bridged the gap between national policy and field reality, creating a sustainable water management plan that serves 15 villages."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="professional male researcher in field attire, outdoor setting with greenery, smart and approachable look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbFFjhlTJBNsQ5y3NYh9TWwx5CCExAs7PAaboYWc2TJji0e1oeEWLzkSDVJrpdw9aD7TCY2jXJPxN895p_G4jv1qjlHQcXGZ2cSe_nmLDPU-l6yM1oPZwubSGxbxwNnxOtDF_SA9FI8V558Yazk8Uh5_N6RNLZoBGZmLZUkDZnR7Tdos5vMhJHytFSETiXCHgpRHfj-QP0UjUmUFAgFEkVLQ1t8Pfn-gm4HPvB1y5L81YnvwB6YS-BdtBag4DfBtkAnjXu9JS3dQU"/>
+</div>
+<div>
+<p class="font-bold text-white">Dr. Samuel Chen</p>
+<p class="text-sm text-on-primary-container">Ministry of Agriculture</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 w-full h-full">
+<img alt="" class="rounded-2xl shadow-2xl h-full w-full object-cover" data-alt="close-up of healthy vibrant crop seedlings growing in a modern organic farm with precision irrigation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArV5LNM1Od_tfK-U5QGywtBmzozIz2WkAKi0-QttXzjPOCuY968ayfbHaZmk5iDmw3Ddmac0OI7jrrKqA_MwQzMO8We-v1K-nuIIiLdpVrdz3gZNFBlSCWkFfK4xzE3YsACzciOiQSUm3UvpjVzKNDiX34SQIS3Ln8GfqZYyCyRopyO5HluG3hxcXWQtwttYbG7mjrJ6db5jEVw30ySgsOMNS1gnOooGOFmQrQ7EATJAHbe_NTJWJHvssyWjMMT1eYBoe-JKJsiy0"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Network Carousel -->
+<section class="py-24 bg-surface-container-highest/30">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-12">
+<p class="text-sm font-bold tracking-widest text-primary uppercase mb-4">Our Collaborative Ecosystem</p>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="h-12 w-40 flex items-center justify-center font-black text-2xl text-on-surface-variant">PARTNER_A</div>
+<div class="h-12 w-40 flex items-center justify-center font-black text-2xl text-on-surface-variant">FUND_GLOBAL</div>
+<div class="h-12 w-40 flex items-center justify-center font-black text-2xl text-on-surface-variant">CIVIL_SCI_NET</div>
+<div class="h-12 w-40 flex items-center justify-center font-black text-2xl text-on-surface-variant">GOVT_AGRI</div>
+<div class="h-12 w-40 flex items-center justify-center font-black text-2xl text-on-surface-variant">ECO_TECH</div>
+</div>
+</div>
+</section>
+<!-- News & Highlights -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Masonry News -->
+<div class="lg:col-span-8 space-y-12">
+<h2 class="text-4xl font-bold font-headline mb-12">Field Notes &amp; News</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4 group cursor-pointer">
+<div class="overflow-hidden rounded-2xl aspect-video">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="group of rural farmers attending a digital literacy workshop in an outdoor community center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC5mbiVMKrg8ed-WecuYGou-r7wJ8QF-O5EvBbmuWUKNdQGP020XRDOHr6jGXsb6stalH_aX0XlNTeL_fz-WrKia9XQLF_5VpWIPR7g-NC0zeQ2u5FWJlS5cVN9oHcI5lvPKs8vGixbph90wOtA-0BN6MsUTgv3oZCNeKNDFXgurkIP0VSovTic7MDwDs3BA7OCFl5ZzG8ULVhviqiJGAj8nmGOJ3tZ_c3jI-Xoo2HlftHjvMfDffsLP0Lq0iIfM2iuMgnpAh6ZlY"/>
+</div>
+<div class="flex items-center gap-3 text-sm text-primary font-bold">
+<span class="bg-primary-fixed px-2 py-1 rounded">OCT 14, 2024</span>
+<span>CAPACITY BUILDING</span>
+</div>
+<h3 class="text-xl font-bold hover:text-primary transition-colors">Digital Literacy Tour Reaches Central Highlands</h3>
+<p class="text-on-surface-variant line-clamp-2">Over 500 smallholder farmers were introduced to mobile market analytics this month...</p>
+</div>
+<div class="space-y-4 group cursor-pointer">
+<div class="overflow-hidden rounded-2xl aspect-video">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="overhead view of organized diverse vegetable garden with wooden planters and stone paths" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEehjhzHFq4GlJJ4mK9IUy9w0Nrmw27RBsH2XL8zq-L4MUahy9xnpaS43pGpeEM-iRfK1i9B59DE1X2pWlG7WhbUQK3aB2_nRaOKglRtNpU3wnnR3OvqbsS63JhxD6Hd9o7CwXO2YkqjcS3B4Oz-RcT9Qjbv7S-Z6h9BpB9DW-WX84rQZArtDkgoBeqNH-V0-xPD2gkGLYvi9nljZIQnd38RzwLaVJDsDfAqLZmTpfYpUqxCFN8PoaJPRyzFHvzLjwjdmR_dLjZFo"/>
+</div>
+<div class="flex items-center gap-3 text-sm text-primary font-bold">
+<span class="bg-primary-fixed px-2 py-1 rounded">SEP 28, 2024</span>
+<span>RESEARCH</span>
+</div>
+<h3 class="text-xl font-bold hover:text-primary transition-colors">Annual Soil Health Report Published</h3>
+<p class="text-on-surface-variant line-clamp-2">Our longitudinal study shows a 15% increase in soil organic carbon across network farms...</p>
+</div>
+</div>
+</div>
+<!-- Right: Highlight Boxes -->
+<div class="lg:col-span-4 space-y-6">
+<div class="p-8 bg-primary rounded-3xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-4">Annual Nexus Summit</h3>
+<p class="text-primary-fixed-dim mb-6">Join us in November for the world's leading forum on rural digital transformation.</p>
+<button class="w-full py-3 bg-white text-primary rounded-xl font-bold hover:bg-on-primary-container transition-all">Register Now</button>
+</div>
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 hexagon-mask"></div>
+</div>
+<div class="p-8 bg-amber-50 rounded-3xl border border-amber-100">
+<h3 class="text-xl font-bold text-amber-950 mb-4">Open Tenders</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-600 mt-1">description</span>
+<div>
+<p class="text-sm font-bold text-amber-900">IT Infrastructure Build-out</p>
+<p class="text-xs text-amber-700">Deadline: Nov 05</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-600 mt-1">description</span>
+<div>
+<p class="text-sm font-bold text-amber-900">Seeds &amp; Tools Procurement</p>
+<p class="text-xs text-amber-700">Deadline: Oct 30</p>
+</div>
+</li>
+</ul>
+<a class="inline-block mt-6 text-amber-800 text-sm font-bold underline" href="#">View all opportunities</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 dark:bg-black w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="md:col-span-1">
+<div class="text-3xl font-black text-emerald-50 opacity-20 mb-6">RuralNexus</div>
+<p class="text-emerald-200/70 text-sm leading-relaxed max-w-xs">
+                    Building the digital and physical infrastructure for a sustainable, resilient rural future across the globe.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8 md:col-span-2">
+<div class="flex flex-col gap-4">
+<h4 class="text-emerald-100 font-bold mb-2">Organization</h4>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Mission</a>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Project Acquisition</a>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Management</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-emerald-100 font-bold mb-2">Resources</h4>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Research</a>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Capacity Building</a>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Consultancy</a>
+<a class="text-emerald-200/70 hover:text-white transition-colors hover:underline decoration-amber-500 underline-offset-4 text-sm font-['Inter']" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="md:col-span-1 space-y-6">
+<h4 class="text-emerald-100 font-bold mb-2">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-emerald-900/30 border-none rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-amber-500" placeholder="Email address" type="email"/>
+<button class="absolute right-2 top-2 p-1 text-amber-500">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-emerald-900/50 flex items-center justify-center text-emerald-100">FB</span>
+<span class="w-8 h-8 rounded-full bg-emerald-900/50 flex items-center justify-center text-emerald-100">LN</span>
+<span class="w-8 h-8 rounded-full bg-emerald-900/50 flex items-center justify-center text-emerald-100">X</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-emerald-900/30 text-center">
+<p class="text-emerald-200/50 text-sm font-['Inter']">
+                © 2024 RuralNexus NGO. Empowering Rural Resilience through Digital Excellence.
+            </p>
+</div>
+</footer>
+</body></html>
