@@ -94,7 +94,7 @@ function closeMenu() {
     >
       <div 
         v-if="isMenuOpen" 
-        class="fixed inset-y-0 right-0 w-full max-w-sm bg-surface shadow-2xl z-40 lg:hidden border-l border-outline-variant/10 flex flex-col"
+        class="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl z-40 lg:hidden border-l border-outline-variant/10 flex flex-col"
       >
         <!-- Mobile Header (Logo is behind but visible, we add a close button here too) -->
         <div class="h-20 flex items-center justify-end px-6 shrink-0">
