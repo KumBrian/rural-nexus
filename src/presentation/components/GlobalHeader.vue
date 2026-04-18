@@ -71,7 +71,7 @@ function closeMenu() {
             </NuxtLink>
           </div>
 
-          <!-- Mobile Menu Toggle -->
+          <!-- Mobile Menu Toggle (Only seen on mobile/tablet) -->
           <button 
             @click="toggleMenu"
             class="ml-4 p-2 text-on-surface hover:text-primary transition-colors lg:hidden rounded-lg hover:bg-surface-container-low"
@@ -83,87 +83,98 @@ function closeMenu() {
       </div>
     </div>
 
-    <!-- Mobile Menu Drawer (Side Slide) -->
-    <Transition
-      enter-active-class="transition duration-300 ease-out"
-      enter-from-class="translate-x-full"
-      enter-to-class="translate-x-0"
-      leave-active-class="transition duration-200 ease-in"
-      leave-from-class="translate-x-0"
-      leave-to-class="translate-x-full"
-    >
-      <div 
-        v-if="isMenuOpen" 
-        class="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl z-40 lg:hidden border-l border-outline-variant/10 flex flex-col"
+    <!-- Mobile Navigation Layer (Teleported to body for Stacking Context & Clipping Fix) -->
+    <Teleport to="body">
+      <!-- Backdrop -->
+      <Transition
+        enter-active-class="transition duration-300 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition duration-200 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
       >
-        <!-- Mobile Header (Logo is behind but visible, we add a close button here too) -->
-        <div class="h-20 flex items-center justify-end px-6 shrink-0">
-           <button @click="toggleMenu" class="p-2 text-on-surface">
-             <X class="w-6 h-6" />
-           </button>
-        </div>
+        <div 
+          v-if="isMenuOpen" 
+          @click="closeMenu"
+          class="fixed inset-0 bg-primary/40 backdrop-blur-md z-[90]"
+        ></div>
+      </Transition>
 
-        <div class="flex-grow overflow-y-auto px-6 pb-10 flex flex-col gap-8">
-          <!-- Mobile Search -->
-          <div class="relative group">
-            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search class="h-4 w-4 text-on-surface-variant/50" />
+      <!-- Drawer -->
+      <Transition
+        enter-active-class="transition duration-500 ease-in-out"
+        enter-from-class="translate-x-full"
+        enter-to-class="translate-x-0"
+        leave-active-class="transition duration-400 ease-in-out"
+        leave-from-class="translate-x-0"
+        leave-to-class="translate-x-full"
+      >
+        <div 
+          v-if="isMenuOpen" 
+          class="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl z-[100] border-l border-outline-variant/10 flex flex-col h-[100dvh]"
+        >
+          <!-- Drawer Header (Refined for Mobile Depth) -->
+          <div class="h-20 flex items-center justify-between px-6 shrink-0 border-b border-outline-variant/5">
+             <!-- Logo inside Mobile Menu -->
+             <NuxtLink to="/" @click="closeMenu" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 hex-mask bg-gradient-to-br from-cyan-500 to-leaf-500 flex items-center justify-center text-white font-bold text-lg">
+                  R
+                </div>
+                <span class="font-display font-bold text-lg text-primary-container tracking-tight">RuralNexus</span>
+             </NuxtLink>
+             
+             <button @click="toggleMenu" class="p-2 text-on-surface hover:bg-surface-container-low rounded-xl transition-colors">
+               <X class="w-6 h-6" />
+             </button>
+          </div>
+
+          <div class="flex-grow overflow-y-auto px-6 py-8 flex flex-col gap-10">
+            <!-- Search Integration -->
+            <div class="relative group">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Search class="h-4 w-4 text-on-surface-variant/50" />
+              </div>
+              <input
+                type="text"
+                placeholder="Search RuralNexus..."
+                class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border border-outline-variant/10 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body"
+              />
             </div>
-            <input
-              type="text"
-              placeholder="Search RuralNexus..."
-              class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border border-outline-variant/10 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-            />
-          </div>
 
-          <!-- Mobile Nav Links -->
-          <nav class="flex flex-col gap-1">
-            <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-4 opacity-50 px-2">Navigation</p>
-            <NuxtLink 
-              v-for="link in navLinks" 
-              :key="link.path"
-              :to="link.path"
-              @click="closeMenu"
-              class="flex items-center justify-between px-6 py-4 rounded-2xl text-lg font-display font-bold text-on-surface hover:bg-primary/5 hover:text-primary transition-all group"
-              active-class="bg-primary/5 text-primary"
-            >
-              {{ link.name }}
-              <ChevronRight class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-            </NuxtLink>
-          </nav>
+            <!-- Navigation Units -->
+            <nav class="flex flex-col gap-1">
+              <p class="text-[10px] font-bold text-on-surface-variant/50 uppercase tracking-[0.2em] mb-4 px-2">Navigation Archive</p>
+              <NuxtLink 
+                v-for="link in navLinks" 
+                :key="link.path"
+                :to="link.path"
+                @click="closeMenu"
+                class="flex items-center justify-between px-6 py-4 rounded-2xl text-lg font-display font-bold text-on-surface hover:bg-primary/5 hover:text-primary transition-all group"
+                active-class="bg-primary/5 text-primary"
+              >
+                {{ link.name }}
+                <ChevronRight class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+              </NuxtLink>
+            </nav>
 
-          <!-- Mobile Footer CTA -->
-          <div class="mt-auto py-6">
-            <NuxtLink 
-              to="/contact" 
-              @click="closeMenu"
-              class="flex items-center justify-center w-full py-5 bg-primary text-white rounded-[20px] font-bold shadow-2xl shadow-primary/20 hover:bg-primary-container transition-all"
-            >
-              Contact Us Today
-            </NuxtLink>
-            <p class="text-center text-[10px] text-on-surface-variant mt-4 opacity-40 font-medium italic">
-              Empowering Rural Resilience through Innovation
-            </p>
+            <!-- Bottom Action Complex -->
+            <div class="mt-auto pb-6">
+              <NuxtLink 
+                to="/contact" 
+                @click="closeMenu"
+                class="flex items-center justify-center w-full py-5 bg-primary text-white rounded-[22px] font-bold shadow-2xl shadow-primary/30 hover:bg-primary-container transition-all"
+              >
+                Contact Field Hubs
+              </NuxtLink>
+              <p class="text-center text-[10px] text-on-surface-variant mt-6 opacity-40 font-medium italic">
+                Sovereignty through shared intelligence.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </Transition>
-
-    <!-- Overlay Backdrop -->
-    <Transition
-      enter-active-class="transition duration-300 ease-out"
-      enter-from-class="opacity-0"
-      enter-to-class="opacity-100"
-      leave-active-class="transition duration-200 ease-in"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
-    >
-      <div 
-        v-if="isMenuOpen" 
-        @click="closeMenu"
-        class="fixed inset-0 bg-primary/40 backdrop-blur-md z-30 lg:hidden"
-      ></div>
-    </Transition>
+      </Transition>
+    </Teleport>
   </header>
 </template>
 
@@ -180,5 +191,12 @@ function closeMenu() {
 
 .no-border {
   border-bottom: none !important;
+}
+
+/* Ensure dynamic viewport height works correctly in iOS */
+@supports (height: 100dvh) {
+  .h-\[100dvh\] {
+    height: 100dvh;
+  }
 }
 </style>
