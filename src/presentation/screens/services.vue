@@ -110,9 +110,6 @@ function getColorClass(theme: string) {
   </div>
 </template>
 
-<script setup lang="ts">
-// Already defined above
-</script>
 
 <style scoped>
 .hex-mask {
