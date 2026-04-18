@@ -94,11 +94,31 @@ function closeMenu() {
     >
       <div 
         v-if="isMenuOpen" 
-        class="fixed inset-y-0 right-0 w-full max-w-sm bg-white/95 backdrop-blur-xl shadow-2xl z-40 lg:hidden border-l border-outline-variant/10"
+        class="fixed inset-y-0 right-0 w-full max-w-sm bg-surface shadow-2xl z-40 lg:hidden border-l border-outline-variant/10 flex flex-col"
       >
-        <div class="flex flex-col h-full pt-28 pb-10 px-6">
+        <!-- Mobile Header (Logo is behind but visible, we add a close button here too) -->
+        <div class="h-20 flex items-center justify-end px-6 shrink-0">
+           <button @click="toggleMenu" class="p-2 text-on-surface">
+             <X class="w-6 h-6" />
+           </button>
+        </div>
+
+        <div class="flex-grow overflow-y-auto px-6 pb-10 flex flex-col gap-8">
+          <!-- Mobile Search -->
+          <div class="relative group">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <Search class="h-4 w-4 text-on-surface-variant/50" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search RuralNexus..."
+              class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border border-outline-variant/10 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+            />
+          </div>
+
           <!-- Mobile Nav Links -->
-          <nav class="flex-grow flex flex-col gap-2">
+          <nav class="flex flex-col gap-1">
+            <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-4 opacity-50 px-2">Navigation</p>
             <NuxtLink 
               v-for="link in navLinks" 
               :key="link.path"
@@ -113,14 +133,17 @@ function closeMenu() {
           </nav>
 
           <!-- Mobile Footer CTA -->
-          <div class="mt-auto px-6 pt-6 border-t border-outline-variant/10">
+          <div class="mt-auto py-6">
             <NuxtLink 
               to="/contact" 
               @click="closeMenu"
-              class="flex items-center justify-center w-full py-4 bg-primary text-white rounded-2xl font-bold shadow-xl shadow-primary/20 hover:bg-primary-container transition-all"
+              class="flex items-center justify-center w-full py-5 bg-primary text-white rounded-[20px] font-bold shadow-2xl shadow-primary/20 hover:bg-primary-container transition-all"
             >
-              Contact Us
+              Contact Us Today
             </NuxtLink>
+            <p class="text-center text-[10px] text-on-surface-variant mt-4 opacity-40 font-medium italic">
+              Empowering Rural Resilience through Innovation
+            </p>
           </div>
         </div>
       </div>
@@ -138,7 +161,7 @@ function closeMenu() {
       <div 
         v-if="isMenuOpen" 
         @click="closeMenu"
-        class="fixed inset-0 bg-primary/20 backdrop-blur-sm z-30 lg:hidden"
+        class="fixed inset-0 bg-primary/40 backdrop-blur-md z-30 lg:hidden"
       ></div>
     </Transition>
   </header>
