@@ -38,7 +38,7 @@ const programs = [
     description:
       'Establishing rapid-response field stations and climate-adaptive infrastructure for vulnerable agrarian communities across the Global South.',
     stat: '48 hubs',
-    statLabel: 'Operational Response Centers',
+    statLabel: 'Active Regional Stations',
     icon: ShieldAlert,
     color: 'amber'
   },
@@ -170,7 +170,7 @@ const programs = [
              Research Partnership
            </button>
            <button class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-xl font-bold hover:bg-surface-container-high transition-all">
-             Field Hub Collaboration
+             Regional Collaboration
            </button>
          </div>
        </div>

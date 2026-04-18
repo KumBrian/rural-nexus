@@ -467,23 +467,6 @@ const howItWorks = [
       </div>
     </section>
 
-    <!-- CTA banner -->
-    <section class="bg-primary-container py-16">
-      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 class="font-display text-2xl font-bold text-on-primary-fixed md:text-3xl">
-          Not ready to volunteer yet?
-        </h2>
-        <p class="mx-auto mt-4 max-w-lg font-body text-on-primary-fixed opacity-80">
-          You can still make a difference. Donate to fund the research and field operations that our
-          volunteers power every day.
-        </p>
-        <NuxtLink
-          to="/donate"
-          class="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-bold text-primary shadow-lg transition hover:-translate-y-0.5"
-        >
-          Make a Donation
-        </NuxtLink>
-      </div>
-    </section>
+
   </div>
 </template>

@@ -287,63 +287,6 @@ const categoryColors: Record<string, string> = {
       </div>
     </section>
 
-    <!-- Press & media kit -->
-    <section class="bg-surface-container-low py-16">
-      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div
-          class="rounded-2xl bg-surface-container-lowest p-8 md:p-12 ambient-shadow"
-        >
-          <div
-            class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
-          >
-            <div>
-              <p
-                class="text-sm font-bold uppercase tracking-widest text-primary"
-              >
-                Press Kit
-              </p>
-              <h2
-                class="mt-2 font-display text-2xl font-bold text-on-surface md:text-3xl"
-              >
-                Media & Press Resources
-              </h2>
-              <p class="mt-3 max-w-lg font-body text-on-surface-variant">
-                Journalists and partners can download our logo kit, brand
-                guidelines, official press releases, and high-resolution imagery
-                from the button below.
-              </p>
-            </div>
-            <div class="flex flex-col gap-3 sm:flex-row">
-              <button
-                type="button"
-                class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 font-bold text-on-primary transition hover:opacity-90"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1m-4-4-4 4m0 0-4-4m4 4V4"
-                  />
-                </svg>
-                Download Press Kit
-              </button>
-              <NuxtLink
-                to="/contact"
-                class="inline-flex items-center justify-center gap-2 rounded-lg border border-outline-variant px-6 py-3.5 font-bold text-on-surface transition hover:bg-surface-container-low"
-              >
-                Media Enquiries
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </div>
 </template>

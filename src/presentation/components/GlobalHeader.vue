@@ -165,7 +165,7 @@ function closeMenu() {
                 @click="closeMenu"
                 class="flex items-center justify-center w-full py-5 bg-primary text-white rounded-[22px] font-bold shadow-2xl shadow-primary/30 hover:bg-primary-container transition-all"
               >
-                Contact Field Hubs
+                Contact Our Team
               </NuxtLink>
               <p class="text-center text-[10px] text-on-surface-variant mt-6 opacity-40 font-medium italic">
                 Sovereignty through shared intelligence.
