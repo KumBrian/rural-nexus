@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-primary-container text-on-primary-fixed pt-16 pb-8 border-t-[8px] border-leaf relative overflow-hidden">
+  <footer class="bg-primary-container text-white pt-16 pb-8 border-t-[8px] border-leaf relative overflow-hidden">
     <!-- Decorative Watermark Graphic -->
     <div class="absolute -bottom-24 -right-24 w-96 h-96 hex-mask bg-primary opacity-20 pointer-events-none"></div>
 
@@ -13,7 +13,7 @@
             </div>
             <span class="font-display font-bold text-lg text-white tracking-tight">RuralNexus</span>
           </div>
-          <p class="text-sm opacity-80 leading-relaxed font-body">
+          <p class="text-sm text-white/90 leading-relaxed font-body">
             Empowering Rural Resilience. Action Research, Innovation, and Development for resilient food systems.
           </p>
         </div>
@@ -21,7 +21,7 @@
         <!-- Links Col -->
         <div>
           <h4 class="font-display font-semibold text-white mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm opacity-80">
+          <ul class="space-y-2 text-sm text-white/90">
             <li><NuxtLink to="/" class="hover:text-leaf transition-colors">Home</NuxtLink></li>
             <li><NuxtLink to="/about" class="hover:text-leaf transition-colors">Who We Are</NuxtLink></li>
             <li><NuxtLink to="/programs" class="hover:text-leaf transition-colors">Programs</NuxtLink></li>
@@ -36,7 +36,7 @@
         <!-- Contact Col -->
         <div>
           <h4 class="font-display font-semibold text-white mb-4">Contact Info</h4>
-          <ul class="space-y-2 text-sm opacity-80">
+          <ul class="space-y-2 text-sm text-white/90">
             <li class="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               +1 (555) 123-4567
@@ -53,10 +53,10 @@
         </div>
       </div>
       
-      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs opacity-60">
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/70">
         <p>&copy; 2026 RuralNexus. All rights reserved.</p>
         <div class="flex gap-4 mt-4 md:mt-0">
-          <button class="hover:text-white transition-colors">Accessibility Options</button>
+          <button class="hover:text-leaf transition-colors">Accessibility Options</button>
         </div>
       </div>
     </div>

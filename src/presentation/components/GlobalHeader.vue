@@ -13,10 +13,13 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="hidden md:flex space-x-8">
-          <NuxtLink to="/" class="text-on-surface hover:text-primary-container px-3 py-2 text-sm font-medium transition-colors">Home</NuxtLink>
-          <NuxtLink to="/about" class="text-on-surface hover:text-primary-container px-3 py-2 text-sm font-medium transition-colors">Who We Are</NuxtLink>
-          <NuxtLink to="/services" class="text-on-surface hover:text-primary-container px-3 py-2 text-sm font-medium transition-colors">Our Services</NuxtLink>
+        <nav class="hidden md:flex space-x-6 items-center">
+          <NuxtLink to="/" class="text-on-surface hover:text-primary-container px-2 py-2 text-sm font-medium transition-colors">Home</NuxtLink>
+          <NuxtLink to="/about" class="text-on-surface hover:text-primary-container px-2 py-2 text-sm font-medium transition-colors">About</NuxtLink>
+          <NuxtLink to="/programs" class="text-on-surface hover:text-primary-container px-2 py-2 text-sm font-medium transition-colors">Programs</NuxtLink>
+          <NuxtLink to="/volunteer" class="text-on-surface hover:text-primary-container px-2 py-2 text-sm font-medium transition-colors">Volunteer</NuxtLink>
+          <NuxtLink to="/events" class="text-on-surface hover:text-primary-container px-2 py-2 text-sm font-medium transition-colors">Events</NuxtLink>
+          <NuxtLink to="/gallery" class="text-on-surface hover:text-primary-container px-2 py-2 text-sm font-medium transition-colors">Gallery</NuxtLink>
         </nav>
 
         <!-- CTA & Utility -->
